@@ -1,6 +1,12 @@
 const findMinimum = arr => {
-
-  // Your code here 
+  let min = Infinity
+  if (arr.length === 0) return undefined
+  else {
+    for (let i = 0; i <= arr.length; i++) {
+      if (arr[i] < min) min = arr[i]
+    }
+    return min
+  }
 
 };
 
@@ -36,4 +42,7 @@ const shuffle = (arr) => {
 };
 
 
+
+let arr = [7, 5, 2, 3, 4, 1]
+console.log(findMinimum(arr))
 module.exports = [findMinimum, runningSum, evenNumOfChars, smallerThanCurr, twoSum, secondLargest, shuffle];
